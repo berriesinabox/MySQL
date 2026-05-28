@@ -1,0 +1,36 @@
+create database company;
+
+use company;
+CREATE TABLE employee_info (
+    ID INT PRIMARY KEY,
+    NAME VARCHAR(50),
+    SALARY BIGINT
+);
+insert into employee_info (ID,NAME,SALARY)
+    VALUES
+    (1,"ADAAM",25000),
+    (2,"BOB",30000),
+    (3,"CASEY",40000);
+select*from employee_info;
+
+create table employee(
+	id int primary key,
+    name varchar(30),
+    manager_id int
+    );
+insert into employee (id ,name,manager_id)
+values
+(101,"adam",103),
+(102,"bob",104),
+(103,"casey",null),
+(104,"donald",103);
+
+select * from employee;
+
+select a.name as manager_name,b.name
+from employee as a
+join employee as b
+on a.id = b.manager_id;
+
+
+    
