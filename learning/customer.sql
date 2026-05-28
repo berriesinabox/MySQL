@@ -22,4 +22,3 @@ values
 select mode , count(name)
 from payment
 group by mode;
-
